@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS grid is supa cooool 😎</title>
+        <!-- in liue of linking a css doc -->
+        <style>
+            .grid-container {
+                /* define the layout and properties of the grid here in the parent element */
+                display: grid;
+                /* define the measurements of the grid in columns and rows */
+                /* fr = grid measurement = fraction of the grid */
+                grid-template-columns: 1fr 1fr 1fr;
+                /* grid-template-rows: 400px 2fr 1fr 400px; */
+                /* grid gap specifices a gutter around the elements */
+                gap: .5rem;
+                background-color: indigo;
+            }
+
+            .grid-item {
+                background-color: hotpink;
+                font-size: 3rem;
+                border: 2px solid chartreuse;
+                text-align: center;
+            }
+
+            .big-item {
+                /* apply to a child to specificy how much space the child takes up */
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            .large-boi {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+            .long-john {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- the display property of a grid must be on the parent -->
+        <div class="grid-container">
+            <!-- child elements here will be on a grid -->
+            <div class="grid-item">1</div>
+            <div class="grid-item large-boi">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item long-john">8</div>
+            <div class="grid-item big-item">9</div>
+            <div class="grid-item big-item">10</div>
+        </div>
+    </body>
+</html>
